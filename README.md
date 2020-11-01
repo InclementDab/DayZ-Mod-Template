@@ -3,3 +3,6 @@ Mod Template for DayZ Standalone. Includes build tools, gproj, and script folder
 
 
 Build with ZBinarizeDeploy.bat
+
+
+Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
