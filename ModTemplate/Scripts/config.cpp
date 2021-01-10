@@ -1,26 +1,26 @@
 
 class CfgPatches
 {
-	class Editor_Scripts
+	class ModTemplate_Scripts
 	{
         units[] = {};
         weapons[] = {};
         requiredVersion = 0.1;
-		requiredAddons[] = {"DZ_Scripts", "JM_CF_Scripts"};
+		requiredAddons[] = {"DZ_Scripts"};
 	};
 };
 
 class CfgMods 
 {
-	class DZ_Editor
+	class DZ_ModTemplate
 	{
-		name = "DayZ Editor";
-		dir = "DayZEditor";
-		credits = "InclementDab";
-		author = "InclementDab";
-		creditsJson = "DayZEditor/Scripts/Data/Credits.json";
-		versionPath = "DayZEditor/scripts/Data/Version.hpp";
-		inputs = "DayZEditor/Scripts/Data/Inputs.xml";
+		name = "Mod Template";
+		dir = "ModTemplate";
+		credits = "";
+		author = "";
+		creditsJson = "ModTemplate/Scripts/Data/Credits.json";
+		versionPath = "ModTemplate/scripts/Data/Version.hpp";
+		inputs = "ModTemplate/Scripts/Data/Inputs.xml";
 		type = "mod";
 		dependencies[] =
 		{
@@ -32,7 +32,7 @@ class CfgMods
 			{
 				files[]=
 				{
-					"DayZEditor/gui/imagesets/dayz_editor_gui.imageset"
+					"ModTemplate/gui/imagesets/dayz_editor_gui.imageset"
 				};
 			};
 			class engineScriptModule
@@ -40,8 +40,8 @@ class CfgMods
 				value = "";
 				files[] =
 				{
-					"DayZEditor/scripts/common",
-					"DayZEditor/scripts/1_core"
+					"ModTemplate/scripts/common",
+					"ModTemplate/scripts/1_core"
 				};
 			};
 
@@ -50,8 +50,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"DayZEditor/scripts/common",
-					"DayZEditor/scripts/3_Game"
+					"ModTemplate/scripts/common",
+					"ModTemplate/scripts/3_Game"
 				};
 			};
 			class worldScriptModule
@@ -59,8 +59,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"DayZEditor/scripts/common",
-					"DayZEditor/scripts/4_World"
+					"ModTemplate/scripts/common",
+					"ModTemplate/scripts/4_World"
 				};
 			};
 
@@ -69,8 +69,8 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"DayZEditor/scripts/common",
-					"DayZEditor/scripts/5_Mission"
+					"ModTemplate/scripts/common",
+					"ModTemplate/scripts/5_Mission"
 				};
 			};
 		};
