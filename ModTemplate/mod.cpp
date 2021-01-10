@@ -1,9 +1,9 @@
-name = "DayZ Editor";
-picture = "DayZEditor/gui/images/dayz_editor_icon_black.edds";
-logo = "DayZEditor/gui/images/dayz_editor_icon_black.edds";
-logoSmall = "DayZEditor/gui/images/dayz_editor_icon_black.edds";
-logoOver = "DayZEditor/gui/images/dayz_editor_icon_black.edds";
-tooltip = "DayZ Editor";
+name = "ModTemplate";
+picture = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
+logo = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
+logoSmall = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
+logoOver = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
+tooltip = "ModTemplate";
 overview = "";
 action = "";
 author = "";
