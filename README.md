@@ -18,6 +18,7 @@ Mod Template for DayZ Standalone. Includes build tools, gproj, and script folder
 4.) Run SetupWorkdrive.bat
 5.) Build with ZBinarizeDeploy.bat
 6.) Open dayz.gproj by double clicking it and opening with workbench
-7.) Run with any of the provided Batch Files```
+7.) Run with any of the provided Batch Files
+```
 
 Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
