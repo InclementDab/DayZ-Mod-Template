@@ -22,3 +22,6 @@ Mod Template for DayZ Standalone. Includes build tools, gproj, and script folder
 ```
 
 Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
+
+DayZ Workbench Wiki:
+https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging#Filepatching
