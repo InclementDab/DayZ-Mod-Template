@@ -1,8 +1,8 @@
 name = "ModTemplate";
-picture = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
-logo = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
-logoSmall = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
-logoOver = "ModTemplate/gui/images/dayz_editor_icon_black.edds";
+picture = "";
+logo = "";
+logoSmall = "";
+logoOver = "";
 tooltip = "ModTemplate";
 overview = "";
 action = "";

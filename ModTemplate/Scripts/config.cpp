@@ -19,7 +19,7 @@ class CfgMods
 		credits = "";
 		author = "";
 		creditsJson = "ModTemplate/Scripts/Data/Credits.json";
-		versionPath = "ModTemplate/scripts/Data/Version.hpp";
+		versionPath = "ModTemplate/Scripts/Data/Version.hpp";
 		inputs = "ModTemplate/Scripts/Data/Inputs.xml";
 		type = "mod";
 		dependencies[] =
@@ -30,10 +30,7 @@ class CfgMods
 		{
 			class imageSets
 			{
-				files[]=
-				{
-					"ModTemplate/gui/imagesets/dayz_editor_gui.imageset"
-				};
+				files[]= {};
 			};
 			class engineScriptModule
 			{
