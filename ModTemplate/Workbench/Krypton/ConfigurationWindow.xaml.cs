@@ -2,9 +2,9 @@
 
 namespace Krypton
 {
-    public partial class MainWindow : Window
+    public partial class ConfigurationWindow : Window
     {
-        public MainWindow()
+        public ConfigurationWindow()
         {
             InitializeComponent();
         }
