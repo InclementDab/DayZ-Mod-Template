@@ -1,13 +1,10 @@
-﻿using Krypton.App;
-using CommandLine.Text;
+﻿using Krypton;
 
 internal class Program
 {
 
     static void Main(string[] args)
     {
-
-
-        Krypton.Execute(args);
+        App.Start(Krypton.LaunchOptions.Create(args));
     }
 }
