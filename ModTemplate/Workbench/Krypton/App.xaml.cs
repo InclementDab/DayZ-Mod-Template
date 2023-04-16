@@ -45,18 +45,14 @@ namespace Krypton
             config["test"] = "123";
 
             IServiceCollection services = new ServiceCollection()
-                // .AddLogging(logger)
                 .AddSingleton(config)
                 .AddTransient(typeof(ConfigurationWindow));
-            //.AddOptions()
-            //.AddLogging()
             ServiceProvider = services.BuildServiceProvider();
 
             ConfigurationWindow window = ServiceProvider.GetRequiredService<ConfigurationWindow>();
             window.Show();
 
-            //ILogger logger = ServiceProvider.GetRequiredService<ILogger>();
-            //logger.LogInformation("Test");
+
         }
     }
 }
