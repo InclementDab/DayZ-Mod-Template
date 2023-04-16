@@ -1,13 +1,15 @@
 using CommandLine;
+using System.Diagnostics;
 
 using Microsoft.Win32;
+using Microsoft.Extensions.Options;
 
 // we dont give a fuck about linux
 #pragma warning disable CA1416
 
 namespace Krypton
 {
-    internal class LaunchOptions
+    public class LaunchOptions
     {
         [Option('v', "verbose", HelpText = "See verbose output")]
         public bool Verbose { get; set; } = true;
@@ -21,12 +23,12 @@ namespace Krypton
         public object? PboProjectDirectory => Registry.CurrentUser.GetValue("Software\\Mikero\\pboProject");
 
 
-        internal static LaunchOptions Create(string[] args)
+        public static LaunchOptions CreateFromArgs(string[] args)
         {
             return Parser.Default.ParseArguments<LaunchOptions>(args)
                 .WithParsed<LaunchOptions>(o => {
                     if (o.Verbose) {
-                        Console.WriteLine($"Verbose output enabled");
+                        Debug.WriteLine($"Verbose output enabled");
                     }
                 }).Value;
         }
