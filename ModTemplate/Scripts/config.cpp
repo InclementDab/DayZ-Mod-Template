@@ -12,7 +12,7 @@ class CfgPatches
 
 class CfgMods 
 {
-	class DZ_ModTemplate
+	class ModTemplate
 	{
 		name = "Mod Template";
 		dir = "ModTemplate";
