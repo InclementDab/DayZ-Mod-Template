@@ -3,14 +3,30 @@ Mod Template for DayZ Standalone. Includes build tools, gproj, and script folder
 
 ### Setup
 ```
-0.) Ensure (Dabs Framework)[https://github.com/InclementDab/DayZ-Dabs-Framework] is on your P drive. Clone and run SetupWorkdrive.bat for this setup
-1.) Clone into hard drive outside of your P drive
-2.) Use VSCode to rename every instance of ModTemplate to your ModPrefixName, and manually rename the two folders
-3.) Run SetupWorkdrive.bat
-4.) Open dayz.gproj by double clicking it and opening with workbench
-5.) Navigate to the Script Editor via Script -> Editor at the top bar
-6.) Press F7 to recompile
-7.) Press Ctrl + F6 to configure the mod, you only need to configure Repository (link it directly to your repository location i.e. C:\DayZ-Mod-Template)
+1.) Clone the following repositories to your PC. Do NOT put them on your P: drive. You can use your favorite Git client, most of us use Github Desktop
+https://github.com/InclementDab/DayZ-Dabs-Framework
+https://github.com/Arkensor/DayZ-CommunityFramework
+
+2.) Clone your new templated repository onto your PC. Using your favorite text editor, rename all instances of ModTemplate to YourModPrefix, including the two folders
+
+3.) In all three repositories, there is a "SetupWorkdrive.bat" file. Run this after you've finished cloning / downloading.
+
+4.) Navigate to P:/YourModPrefix/Workbench (this will be created by the SetupWorkdrive.bat)
+
+5.) Double click dayz.gproj - if prompted to run with an application, be sure to choose Workbench (you can find this in steamapps/common/DayZ Tools/Bin/Workbench)
+
+6.) Upon opening workbench, navigate to Workbench -> Options on the top navbar. Set "Source Data Directory" to your DayZ install location (example: C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp). Restart workbench when prompted. (Upon restarting you will need to close and reopen P:/YourModPrefix/dayz.gproj)
+
+7.) Navigate to Plugins -> Settings -> Configure Project (note: if the plugins folder is empty, you may need to click 'Settings -> Reload WB Scripts')
+
+8.) Set the Repository value to the installation location of your downloaded mod. (example: C:\Dev\proj\DayZ-Mod-Prefix)
+
+9.) (optional) Enable FilePatching in your configuration. This will be handled by the plugin automatically and load scripts / gui ingame without a repack required.
+
+10.) Press F6, or Plugins -> Launch Game . If you've installed everything properly (and have all of our mods downloaded) your game will launch with a virtual mission created in your P:/ drive. 
+
+11.) (not optional) Make some badass mods 
+
 ```
 
 Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
