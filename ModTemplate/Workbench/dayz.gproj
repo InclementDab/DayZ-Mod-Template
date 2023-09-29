@@ -1,14 +1,16 @@
 GameProjectClass {
-	ID "DayZ"
-	TITLE "DayZ"
+	ID "ModTemplate"
+	TITLE "ModTemplate"
 	Configurations {
 		GameProjectConfigClass PC {
 			platformHardware PC
 			skeletonDefinitions "DZ/Anims/cfg/skeletons.anim.xml"
 			FileSystem {
-
+				FileSystemPathClass {
+					Name "Workdrive"
+					Directory "P:/"
+				} 
 			}
-			
 			imageSets {
 				"gui/imagesets/ccgui_enforce.imageset"
 				"gui/imagesets/rover_imageset.imageset"
@@ -24,18 +26,21 @@ GameProjectClass {
 				"gui/imagesets/playstation_buttons.imageset"
 				"gui/imagesets/selection.imageset"
 				"gui/imagesets/console_toolbar.imageset"
-				"DayZEditor/gui/imagesets/dayz_editor_gui.imageset"
 			}
 			widgetStyles {
 				"gui/looknfeel/dayzwidgets.styles" 
 				"gui/looknfeel/widgets.styles"
+				"DabsFramework/gui/looknfeel/prefabs.styles"
 			}
 			ScriptModules {
 				ScriptModulePathClass {
 					Name "core"
 					Paths {
 						"scripts/1_Core"
-						"ModTemplate/scripts/1_Core"
+						"DabsFramework/Scripts/1_Core"
+						"JM/CF/defines"
+						"JM/CF/scripts/1_Core"
+						"ModTemplate/Scripts/1_Core"
 					}
 					EntryPoint ""
 				}
@@ -43,6 +48,8 @@ GameProjectClass {
 					Name "gameLib"
 					Paths {
 						"scripts/2_GameLib"
+						"JM/CF/defines"
+						"JM/CF/scripts/2_GameLib"
 					}
 					EntryPoint ""
 				}
@@ -50,6 +57,9 @@ GameProjectClass {
 					Name "game"
 					Paths {
 						"scripts/3_Game"
+						"DabsFramework/Scripts/3_Game"
+						"JM/CF/defines"
+						"JM/CF/scripts/3_Game"
 						"ModTemplate/Scripts/3_Game"
 					}
 					EntryPoint "CreateGame"
@@ -58,7 +68,10 @@ GameProjectClass {
 					Name "world"
 					Paths {
 						"scripts/4_World"
-						"ModTemplate/scripts/4_World"
+						"DabsFramework/Scripts/4_World"
+						"JM/CF/defines"
+						"JM/CF/scripts/4_World"
+						"ModTemplate/Scripts/4_World"
 					}
 					EntryPoint ""
 				}
@@ -66,7 +79,10 @@ GameProjectClass {
 					Name "mission"
 					Paths {
 						"scripts/5_Mission"
-						"ModTemplate/scripts/5_Mission"
+						"DabsFramework/Scripts/5_Mission"
+						"JM/CF/defines"
+						"JM/CF/scripts/5_Mission"
+						"ModTemplate/Scripts/5_Mission"
 					}
 					EntryPoint "CreateMission"
 				}
@@ -74,11 +90,10 @@ GameProjectClass {
 				ScriptModulePathClass {
 				Name "workbench"
 					Paths {
-						"scripts/editor/Workbench"
-						"scripts/editor/plugins"
-						"ModTemplate/scripts/editor/plugins"
+						"DabsFramework/scripts/editor"
+						"ModTemplate/scripts/editor"
 					} 
-					EntryPoint ""
+					EntryPoint "CreateWorkbench"
 				} 
 			}
 		}

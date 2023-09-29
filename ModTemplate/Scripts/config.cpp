@@ -19,7 +19,6 @@ class CfgMods
 		credits = "";
 		author = "";
 		creditsJson = "ModTemplate/Scripts/Data/Credits.json";
-		versionPath = "ModTemplate/Scripts/Data/Version.hpp";
 		inputs = "ModTemplate/Scripts/Data/Inputs.xml";
 		type = "mod";
 		dependencies[] =
