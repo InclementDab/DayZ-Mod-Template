@@ -13,8 +13,7 @@ DayZExpansion/Scripts/thing.obf
 # User Configuration
 user.cfg
 
-*/Workbench/launch.bin
-*/Workbench/build.bin
+**/Workbench/*.bin
 
 # Text Editor Workspace Configuration
 .vscode/
