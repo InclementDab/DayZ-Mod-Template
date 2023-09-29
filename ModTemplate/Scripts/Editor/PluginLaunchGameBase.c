@@ -128,7 +128,7 @@ class PluginLaunchGameBase: PluginProject
 		CopyFiles(string.Format("%1\\Profiles\\Maps\\%2", launch_settings.Repository, launch_settings.Map), server_profile_directory);
 		CopyFiles(string.Format("%1\\Profiles\\Global", launch_settings.Repository), server_profile_directory);
 		
-		CopyFiles(string.Format("%1\\Missions\\Rearmed.%2", launch_settings.Repository, launch_settings.Map), server_mission);
+		CopyFiles(string.Format("%1\\Missions\\%3.%2", launch_settings.Repository, launch_settings.Map, mod_prefix), server_mission);
 		CopyFiles(string.Format("%1\\Missions\\Global", launch_settings.Repository), server_mission);
 		CopyFiles(string.Format("%1\\Missions\\Dev", launch_settings.Repository), server_mission);
 		
