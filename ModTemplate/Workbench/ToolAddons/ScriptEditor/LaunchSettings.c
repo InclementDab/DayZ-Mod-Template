@@ -6,6 +6,8 @@ enum GameLaunchType
 	OFFLINE= 8
 };
 
+// FIle change!
+
 class LaunchSettings: SerializableBase
 {
 	static const int VERSION = 1;
