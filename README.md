@@ -43,7 +43,7 @@ git push -u origin master
 Once you've set up the files and ran the installation script, follow these instructions to begin working on your mod
 
 ```
-
+Navigate to P:/YourModPrefix/Workbench
 ```
 
 ### Workbench Shortcuts

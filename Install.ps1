@@ -1,7 +1,18 @@
+# Function to check if script is running as administrator
+function Test-IsAdmin {
+    return ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+}
+
+# If not running as admin, re-run the script with elevation
+if (-not (Test-IsAdmin)) {
+    Start-Process -Verb RunAs -FilePath $PSCommandPath
+    return
+}
+
 $prefix = Read-Host -Prompt 'Enter your mod prefix'
 $workdrive = Read-Host -Prompt 'Destination Path (P:\)'
 
-if ($null -eq $workdrive) {
+if ("" -eq $workdrive) {
     $workdrive = "P:\"
 }
 
@@ -27,20 +38,30 @@ New-Item -Path "ModTemplate\Scripts\5_Mission" -Name $prefix -ItemType Directory
 
 Write-Host "Renaming folders..."
 
-foreach ($folder in $folders) {
-    if ($folder.Name -like "*ModTemplate*") {
-        # Construct the new folder name
-        $new_name = $folder.Name -replace "ModTemplate", $prefix
+try {
+    foreach ($folder in $folders) {
+        if ($folder.Name -like "*ModTemplate*") {
+            # Construct the new folder name
+            $new_name = $folder.Name -replace "ModTemplate", $prefix
 
-        # Rename the folder
-        #Rename-Item -Path $folder.FullName -NewName $new_name
-    
-        Write-Host "Renamed '$($folder.Name)' to '$new_name'" -ForegroundColor Green
+            # Rename the folder
+            #Rename-Item -Path $folder.FullName -NewName $new_name
+        
+            Write-Host "Renamed '$($folder.Name)' to '$new_name'"
+        }
     }
 }
+catch {
+    Write-Host "Failed to rename folders: $_" -ForegroundColor Red
+}
 
+# Create the symbolic link to P drive
 
-Write-Host "Creating SymLink to P drive"
-
-$symlink_path = Join-Path -Path $workdrive -ChildPath $prefix
-New-Item -Path $symlink_path -ItemType SymbolicLink -Value $prefix
+try {
+    $symlink_path = Join-Path -Path $workdrive -ChildPath $prefix
+    New-Item -Path $symlink_path -ItemType SymbolicLink -Value $prefix
+    Write-Host "Symbolic link created successfully." -ForegroundColor Green
+}
+catch {
+    Write-Host "Failed to create symbolic link: $_" -ForegroundColor Red
+}
