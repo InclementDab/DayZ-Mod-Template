@@ -1,5 +1,39 @@
 # DayZ-Mod-Template
-Mod Template for DayZ Standalone. Includes build tools, gproj, and script folders
+
+Complete DayZ Mod Template
+
+## Installation
+
+Navigate to your project folder in any terminal of your choice, I use command prompt. **Important:** Do not clone inside of your P:\ drive - This process is done outside of your Workdrive folder.
+
+```
+# Clone the repository onto your PC
+git clone --depth 1 https://github.com/InclementDab/DayZ-Mod-Template.git DayZ-Mod-Name
+
+# Go to your newly cloned folder
+cd DayZ-Mod-Name
+
+# Run setup batch
+./Install.ps1
+
+# Remove old .git folder
+rm -rf .git
+
+# Initialize a new git repository
+git init
+
+# Add all new files and commit
+git add .
+git commit -m "Initial commit"
+```
+
+### How It Works
+This mod template will offload all backend work to Workbench. A few features can be noted below
+- Settings and project management are handled inside of workbench. Ctrl + F6 to modify settings
+- Missions and Profiles are managed internally per-project. Each project is managed by its prefix individually in your P drive
+
+
+### Shortcuts
 
 ### Setup
 ```
@@ -31,5 +65,16 @@ https://github.com/Arkensor/DayZ-CommunityFramework
 
 Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
 
+
 DayZ Workbench Wiki:
 https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging#Filepatching
+
+
+## License
+
+Your tool is licensed under [MIT License](LICENSE.md).
+
+---
+
+For any additional questions or feedback, please raise an issue in this repository or contact [Tyler Paul](mailto:tylerpaul2329@gmail.com).
+```
