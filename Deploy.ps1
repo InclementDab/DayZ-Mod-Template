@@ -1,7 +1,6 @@
 
 # Prompt for deploy location (bit cursed but itll work)
 $host_location = "C:/Dev/proj/inclementdab.gitlab.io"
-$pack_source = Join-Path -Path $host_location -ChildPath "/template/packages/$pack_name"
 $pack_version = Join-Path -Path $host_location -ChildPath "/template/CURRENT"
 
 [Version]$host_version = Get-Content $pack_version
@@ -23,6 +22,7 @@ while (-Not (Test-Path $host_location)) {
 }
 
 $pack_name = "ModTemplate-$Version"
+$pack_source = Join-Path -Path $host_location -ChildPath "/template/packages/$pack_name"
 $pack_source_zip = $pack_source + ".zip";
 
 # Check if the folder exists
