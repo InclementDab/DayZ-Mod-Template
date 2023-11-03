@@ -13,7 +13,7 @@ git clone --depth 1 https://github.com/InclementDab/DayZ-Mod-Template.git DayZ-M
 # Go to your newly cloned folder
 cd DayZ-Mod-Name
 
-# Run setup batch
+# Run installation script
 ./Install.ps1
 
 # Remove old .git folder
@@ -27,13 +27,39 @@ git add .
 git commit -m "Initial commit"
 ```
 
-### How It Works
-This mod template will offload all backend work to Workbench. A few features can be noted below
-- Settings and project management are handled inside of workbench. Ctrl + F6 to modify settings
-- Missions and Profiles are managed internally per-project. Each project is managed by its prefix individually in your P drive
+Push to a new repository 
+```
+# Create a new repository on GitHub (from the website or API)
 
+# Link the local repository to the new remote repository
+git remote add origin https://github.com/yourusername/new-project-name.git
 
-### Shortcuts
+# Push the changes
+git push -u origin master
+```
+
+## Setup
+
+Once you've set up the files and ran the installation script, follow these instructions to begin working on your mod
+
+```
+
+```
+
+### Workbench Shortcuts
+
+All Plugin shortcuts are listed below
+
+| Key          | Command                     |
+|--------------|-----------------------------|
+| <kbd>F6</kbd> | Launch Game |
+| <kbd>Ctrl</kbd> + <kbd>F6</kbd> | Configure Project |
+| <kbd>F10</kbd> | Close Game |
+| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create New File |
+| <kbd>Ctrl</kbd> + <kbd>-</kbd> | Open Current Directory |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> | Rename Current File |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd> | Delete Current File |
+
 
 ### Setup
 ```
@@ -66,8 +92,7 @@ https://github.com/Arkensor/DayZ-CommunityFramework
 Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
 
 
-DayZ Workbench Wiki:
-https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging#Filepatching
+You can find more information on the [DayZ Workbench Wiki](https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging)
 
 
 ## License
