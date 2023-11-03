@@ -1,4 +1,16 @@
-$prefix = Read-Host -Prompt 'Enter your mod prefix...'
+$prefix = Read-Host -Prompt 'Enter your mod prefix'
+$workdrive = Read-Host -Prompt 'Destination Path (P:\)'
+
+if ($null -eq $workdrive) {
+    $workdrive = "P:\"
+}
+
+if (-Not (Test-Path -Path $workdrive)) {
+    Write-Host "Destination Path is not valid $($workdrive)" -ForegroundColor Red
+    Write-Host -NoNewLine 'Press any key to continue...'
+    $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown')
+    return
+}
 
 $folders = Get-ChildItem -Directory -Recurse
 
@@ -27,33 +39,8 @@ foreach ($folder in $folders) {
     }
 }
 
-# Prompt user for input
-$git_enable = $null
-while ($git_enable -ne 'y' -and $git_enable -ne 'n') {
-    $git_enable = Read-Host "Do you want to create a git repository in this directory? (y/n)"
-}
 
-# Check the user's choice
-if ($git_enable -eq 'y') {
-    if (Test-Path ".git") {
-        Write-Host "Existing repository detected" -ForegroundColor Yellow
-        $remotes = git remote
-        if (-not $remotes) {
-            Write-Host "Repository had no remotes, removing..." -ForegroundColor Yellow
-        } else {
-            Write-Host "Remotes detected" -ForegroundColor Red
-        }
+Write-Host "Creating SymLink to P drive"
 
-    }
-
-
-    # Initialize a new git repository
-    #git init
-
-    Write-Host "Initializing Git Repository..." -ForegroundColor Yellow
-
-
-    Write-Host "Git repository initialized successfully." -ForegroundColor Green
-}
-
-
+$symlink_path = Join-Path -Path $workdrive -ChildPath $prefix
+New-Item -Path $symlink_path -ItemType SymbolicLink -Value $prefix
