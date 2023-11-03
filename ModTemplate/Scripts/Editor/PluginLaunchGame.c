@@ -9,7 +9,7 @@ class PluginLaunchGame: PluginLaunchGameBase
 	
 	override bool GetConnectionArguments(out string ip, out int port, out string password)
 	{
-		if (!m_LaunchSettings.AutoConnect) {
+		if (m_LaunchSettings.LaunchType != GameLaunchType.BOTH) {
 			return false;
 		}
 		
