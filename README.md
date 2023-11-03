@@ -54,6 +54,7 @@ All Plugin shortcuts are listed below
 |--------------|-----------------------------|
 | <kbd>F6</kbd> | Launch Game |
 | <kbd>Ctrl</kbd> + <kbd>F6</kbd> | Configure Project |
+| <kbd>F5</kbd> | Join Remote Game |
 | <kbd>F10</kbd> | Close Game |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create New File |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd> | Open Current Directory |
@@ -63,16 +64,6 @@ All Plugin shortcuts are listed below
 
 ### Setup
 ```
-1.) Clone the following repositories to your PC. Do NOT put them on your P: drive. You can use your favorite Git client, most of us use Github Desktop
-https://github.com/InclementDab/DayZ-Dabs-Framework
-https://github.com/Arkensor/DayZ-CommunityFramework
-
-2.) Clone your new templated repository onto your PC. Using your favorite text editor, rename all instances of ModTemplate to YourModPrefix, including the two folders
-
-3.) In all three repositories, there is a "SetupWorkdrive.bat" file. Run this after you've finished cloning / downloading.
-
-4.) Navigate to P:/YourModPrefix/Workbench (this will be created by the SetupWorkdrive.bat)
-
 5.) Double click dayz.gproj - if prompted to run with an application, be sure to choose Workbench (you can find this in steamapps/common/DayZ Tools/Bin/Workbench)
 
 6.) Upon opening workbench, navigate to Workbench -> Options on the top navbar. Set "Source Data Directory" to your DayZ install location (example: C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp). Restart workbench when prompted. (Upon restarting you will need to close and reopen P:/YourModPrefix/dayz.gproj)

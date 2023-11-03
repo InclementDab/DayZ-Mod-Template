@@ -38,8 +38,6 @@ GameProjectClass {
 					Paths {
 						"scripts/1_Core"
 						"DabsFramework/Scripts/1_Core"
-						"JM/CF/defines"
-						"JM/CF/scripts/1_Core"
 						"ModTemplate/Scripts/1_Core"
 					}
 					EntryPoint ""
@@ -48,8 +46,6 @@ GameProjectClass {
 					Name "gameLib"
 					Paths {
 						"scripts/2_GameLib"
-						"JM/CF/defines"
-						"JM/CF/scripts/2_GameLib"
 					}
 					EntryPoint ""
 				}
@@ -58,8 +54,6 @@ GameProjectClass {
 					Paths {
 						"scripts/3_Game"
 						"DabsFramework/Scripts/3_Game"
-						"JM/CF/defines"
-						"JM/CF/scripts/3_Game"
 						"ModTemplate/Scripts/3_Game"
 					}
 					EntryPoint "CreateGame"
@@ -69,8 +63,6 @@ GameProjectClass {
 					Paths {
 						"scripts/4_World"
 						"DabsFramework/Scripts/4_World"
-						"JM/CF/defines"
-						"JM/CF/scripts/4_World"
 						"ModTemplate/Scripts/4_World"
 					}
 					EntryPoint ""
@@ -80,18 +72,15 @@ GameProjectClass {
 					Paths {
 						"scripts/5_Mission"
 						"DabsFramework/Scripts/5_Mission"
-						"JM/CF/defines"
-						"JM/CF/scripts/5_Mission"
 						"ModTemplate/Scripts/5_Mission"
 					}
 					EntryPoint "CreateMission"
 				}
 				
 				ScriptModulePathClass {
-				Name "workbench"
+					Name "workbench"
 					Paths {
-						"DabsFramework/scripts/editor"
-						"ModTemplate/scripts/editor"
+						"ModTemplate/Workbench/ToolAddons"
 					} 
 					EntryPoint "CreateWorkbench"
 				} 

@@ -12,14 +12,12 @@ class CfgPatches
 
 class CfgMods 
 {
-	class DZ_ModTemplate
+	class ModTemplate_Config
 	{
-		name = "Mod Template";
+		name = "DayZ-Mod-Template";
 		dir = "ModTemplate";
-		credits = "";
-		author = "";
-		creditsJson = "ModTemplate/Scripts/Data/Credits.json";
-		inputs = "ModTemplate/Scripts/Data/Inputs.xml";
+		creditsJson = "ModTemplate/Scripts/Credits.json";
+		inputs = "ModTemplate/Scripts/Inputs.xml";
 		type = "mod";
 		dependencies[] =
 		{
@@ -36,7 +34,6 @@ class CfgMods
 				value = "";
 				files[] =
 				{
-					"ModTemplate/scripts/common",
 					"ModTemplate/scripts/1_core"
 				};
 			};
@@ -46,7 +43,6 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"ModTemplate/scripts/common",
 					"ModTemplate/scripts/3_Game"
 				};
 			};
@@ -55,7 +51,6 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"ModTemplate/scripts/common",
 					"ModTemplate/scripts/4_World"
 				};
 			};
@@ -65,7 +60,6 @@ class CfgMods
 				value="";
 				files[] = 
 				{
-					"ModTemplate/scripts/common",
 					"ModTemplate/scripts/5_Mission"
 				};
 			};
