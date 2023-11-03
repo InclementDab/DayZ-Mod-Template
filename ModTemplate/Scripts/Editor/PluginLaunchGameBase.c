@@ -146,6 +146,7 @@ class PluginLaunchGameBase: PluginProject
 		if (launch_settings.FilePatching) {
 			client_launch_params += " -filePatching";
 			server_launch_params += " -filePatching";
+			offline_launch_params += " -filePatching";
 		}
 				
 		if ((launch_settings.LaunchType & GameLaunchType.CLIENT) == GameLaunchType.CLIENT) {
