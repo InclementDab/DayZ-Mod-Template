@@ -2,11 +2,11 @@
 <modded_inputs>
     <inputs>
         <actions>
-			<!-- Actions go here -->
+			    <!-- Actions go here -->
         </actions>
     </inputs>
 
     <preset>
-		<!-- Presets for actions go here -->
+		  <!-- Presets for actions go here -->
     </preset>
 </modded_inputs>
