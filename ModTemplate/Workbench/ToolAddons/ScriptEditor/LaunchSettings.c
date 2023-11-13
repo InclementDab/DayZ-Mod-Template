@@ -58,9 +58,6 @@ class LaunchSettings: SerializableBase
 		
 		Write(serializer, VERSION);
 		serializer.Close();
-		
-		// Some things we do every time its saved
-		
 	}
 	
 	static LaunchSettings Load(string file)
@@ -74,6 +71,8 @@ class LaunchSettings: SerializableBase
 			settings.Mods = "P:\\Mods";
 			settings.ServerConfig = "P:\\ServerDZ.cfg";
 			settings.Map = "ChernarusPlus";
+			settings.FilePatching = true;
+			settings.Deloginator = true;
 			settings.AutoClose = true;
 			settings.Save(file);
 			return settings;
