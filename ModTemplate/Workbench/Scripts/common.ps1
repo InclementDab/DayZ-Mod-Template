@@ -48,7 +48,7 @@ function Get-ModPrefix {
 }
 
 function Get-Workdrive {
-    $workdrive = "X:\"
+    $workdrive = "P:\"
 
     while (-Not (Test-Path -Path $workdrive)) {
         # Get workdrive
