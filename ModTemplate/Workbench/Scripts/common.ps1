@@ -40,11 +40,11 @@ function Download-Tools {
 }
 
 function Get-RepositoryRoot {
-    return (Get-Item $PSScriptRoot).parent.parent.FullName;
+    return (Get-Item $PSScriptRoot).parent.parent.parent.FullName;
 }
 
 function Get-ModPrefix {
-    return (Get-Item $PSScriptRoot).parent.Name;
+    return (Get-Item $PSScriptRoot).parent.parent.Name;
 }
 
 function Get-Workdrive {
