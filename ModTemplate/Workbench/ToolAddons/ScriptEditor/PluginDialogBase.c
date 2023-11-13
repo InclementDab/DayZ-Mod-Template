@@ -19,7 +19,9 @@ class PluginDialogBase: WorkbenchPlugin
 	static string GetPrefix()
 	{
 		array<string> current_dir_split = {};
-		GetCurrentDirectory().Split("/", current_dir_split);
+		string current_directory = GetCurrentDirectory();
+		current_directory.Replace(PATH_SEPERATOR_ALT, PATH_SEPERATOR);
+		current_directory.Split(PATH_SEPERATOR, current_dir_split);
 		return current_dir_split[current_dir_split.Count() - 2];
 	}
 	
@@ -27,6 +29,7 @@ class PluginDialogBase: WorkbenchPlugin
 	{
 		string abs;
 		Workbench.GetAbsolutePath("$SourceData:", abs);
+		abs.Replace(PATH_SEPERATOR_ALT, PATH_SEPERATOR);
 		return abs;
 	}
 	
@@ -34,6 +37,7 @@ class PluginDialogBase: WorkbenchPlugin
 	{
 		string abs;
 		Workbench.GetAbsolutePath("$CurrentDir:", abs);
+		abs.Replace(PATH_SEPERATOR_ALT, PATH_SEPERATOR);
 		return abs;
 	}
 	
@@ -227,8 +231,6 @@ class PluginDialogBase: WorkbenchPlugin
 			}
 		}
 	}
-	
-	
 	
 	static void CopyFiles(string source, string destination)
 	{	
