@@ -114,9 +114,4 @@ class PluginProject: PluginDialogBase
 	    CloseFile(handle);
 		return true;
 	}
-	
-	protected bool LoadServerConfig(string path)
-	{
-		
-	}
 }
