@@ -21,7 +21,6 @@ class BuildSettings: SerializableBase
 	static ParamEnumArray EnumerateBuildableFolders()
 	{
 		array<string> directories = PluginDialogBase.EnumerateDirectories("$CurrentDir:");
-		Print(directories.Count());
 		if (directories.Count() > 32) {
 			Workbench.Dialog("Error", "TOO MANY DIRECTORIES (> 32)");
 			return {};
@@ -62,7 +61,6 @@ class BuildSettings: SerializableBase
 	override void Write(Serializer serializer, int version)
 	{
 		serializer.Write(VERSION);
-		Print(BuildFolders);
 		serializer.Write(BuildFolders);
 	}
 	

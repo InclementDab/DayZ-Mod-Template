@@ -21,10 +21,6 @@ class PluginModCurrentFile: PluginDialogBase
 		m_ScriptEditor.GetCurrentFile(current_file);
 		
 		int line = m_ScriptEditor.GetCurrentLine();
-		
-		
-		Print(current_file);
-		Print(line);
 	}
 	
 	[ButtonAttribute("Cancel")]
