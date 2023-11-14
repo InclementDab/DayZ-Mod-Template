@@ -16,6 +16,8 @@ class PluginDialogBase: WorkbenchPlugin
 		Workbench.Dialog(string.Format("Error: %1", Type()), error);
 	}
 
+#ifdef WORKBENCH_PLUS_DEBUG
+	
 	override void Run()
 	{
 		PrintFormat("Run: %1", Type());
@@ -25,6 +27,8 @@ class PluginDialogBase: WorkbenchPlugin
 	{
 		PrintFormat("RunCommandLine: %1", Type());
 	}
+	
+#endif
 	
 	static string GetPrefix()
 	{
