@@ -4,7 +4,7 @@ class BuildSettings: SerializableBase
 		
 	protected string m_CurrentFileLocation;
 	
-	[Attribute("", "flags", "Choose which folders to build", "", EnumerateBuildableFolders())]
+	//[Attribute("", "flags", "Choose which folders to build", "", EnumerateBuildableFolders())]
 	int BuildFolders;
 	
 	void Save(string file)
