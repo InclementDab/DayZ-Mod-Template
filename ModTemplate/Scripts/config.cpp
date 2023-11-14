@@ -3,8 +3,6 @@ class CfgPatches
 {
 	class ModTemplate_Scripts
 	{
-        units[] = {};
-        weapons[] = {};
         requiredVersion = 0.1;
 		requiredAddons[] = {"DZ_Scripts"};
 	};
@@ -12,13 +10,14 @@ class CfgPatches
 
 class CfgMods 
 {
-	class ModTemplate_Config
+	class ModTemplate
 	{
 		name = "DayZ-Mod-Template";
 		dir = "ModTemplate";
 		creditsJson = "ModTemplate/Scripts/Credits.json";
 		inputs = "ModTemplate/Scripts/Inputs.xml";
 		type = "mod";
+
 		dependencies[] =
 		{
 			"Game", "World", "Mission"
@@ -31,7 +30,6 @@ class CfgMods
 			};
 			class engineScriptModule
 			{
-				value = "";
 				files[] =
 				{
 					"ModTemplate/scripts/1_core"
@@ -40,7 +38,6 @@ class CfgMods
 
 			class gameScriptModule
 			{
-				value="";
 				files[] = 
 				{
 					"ModTemplate/scripts/3_Game"
@@ -48,7 +45,6 @@ class CfgMods
 			};
 			class worldScriptModule
 			{
-				value="";
 				files[] = 
 				{
 					"ModTemplate/scripts/4_World"
@@ -57,7 +53,6 @@ class CfgMods
 
 			class missionScriptModule 
 			{
-				value="";
 				files[] = 
 				{
 					"ModTemplate/scripts/5_Mission"
