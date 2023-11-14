@@ -6,6 +6,13 @@ enum GameLaunchType
 	OFFLINE= 8
 };
 
+// int.MAX prevents 'none' from showing up
+enum YesNo
+{
+	NO = 0,
+	YES = 2147483647,
+};
+
 class LaunchSettings: SerializableBase
 {
 	static const int VERSION = 1;
@@ -37,13 +44,13 @@ class LaunchSettings: SerializableBase
 	[Attribute("", "editbox", "Map")]
 	string Map;
 		
-	[Attribute("", "combobox", "Enable File Patching", "", ParamEnumArray.FromEnum(EBool) )]
+	[Attribute("", "combobox", "Enable File Patching", "", ParamEnumArray.FromEnum(YesNo) )]
 	bool FilePatching;	
 	
-	[Attribute("", "combobox", "Enable Deloginator", "", ParamEnumArray.FromEnum(EBool) )]
+	[Attribute("", "combobox", "Enable Deloginator", "", ParamEnumArray.FromEnum(YesNo) )]
 	bool Deloginator;
 	
-	[Attribute("", "combobox", "Auto Close Game", "", ParamEnumArray.FromEnum(EBool) )]
+	[Attribute("", "combobox", "Auto Close Game", "", ParamEnumArray.FromEnum(YesNo) )]
 	bool AutoClose;
 			
 	void Save(string file)
