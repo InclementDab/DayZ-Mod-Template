@@ -15,6 +15,16 @@ class PluginDialogBase: WorkbenchPlugin
 	{
 		Workbench.Dialog(string.Format("Error: %1", Type()), error);
 	}
+
+	override void Run()
+	{
+		PrintFormat("Run: %1", Type());
+	}
+	
+	override void RunCommandline()
+	{
+		PrintFormat("RunCommandLine: %1", Type());
+	}
 	
 	static string GetPrefix()
 	{
