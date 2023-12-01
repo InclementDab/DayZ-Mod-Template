@@ -101,8 +101,8 @@ New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\3_Game
 New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\4_World\$prefix") -ItemType Directory
 New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\5_Mission\$prefix") -ItemType Directory
 
-New-Item -Path (Join-Path $current_item.FullName "Mission\Dev") -ItemType Directory
-New-Item -Path (Join-Path $current_item.FullName "Mission\Global") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "Missions\Dev") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "Missions\Global") -ItemType Directory
 
 New-Item -Path (Join-Path $current_item.FullName "Profiles\Dev") -ItemType Directory
 New-Item -Path (Join-Path $current_item.FullName "Profiles\Global") -ItemType Directory
