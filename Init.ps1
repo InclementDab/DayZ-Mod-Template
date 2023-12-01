@@ -69,6 +69,17 @@ function Get-Workdrive {
 
 ### END COMMON, START SCRIPT
 
+$current_item = Get-Item .
+$name = $current_item.Name
+$target_directory = $current_item.FullName
+
+$template_token = "ModTemplate"
+
+if (-not (Test-Path (Join-Path $target_directory $template_token))) {
+    Write-Host "Running re-initialization script" -ForegroundColor Yellow
+    $template_token = Read-Host "Enter your current mod prefix name (ModName):"
+}
+
 # Get user input
 $prefix = Read-Host -Prompt 'Enter your mod prefix (ModName)'
 $prefix = $prefix.Replace(" ", "")
@@ -78,10 +89,6 @@ if ("" -eq $prefix) {
     $prefix = "ModName"
 }
 
-$current_item = Get-Item .
-$name = $current_item.Name
-$target_directory = $current_item.FullName
-
 if ("DayZ-Mod-Template" -eq $name) {
     Write-Error "Invalid Mod Name ($name)"
     Read-Host "Press Enter to exit..."
@@ -89,15 +96,18 @@ if ("DayZ-Mod-Template" -eq $name) {
 }
 
 # Create script folders
-New-Item -Path (Join-Path $current_item.FullName "ModTemplate\Scripts\1_Core\$prefix") -ItemType Directory
-New-Item -Path (Join-Path $current_item.FullName "ModTemplate\Scripts\3_Game\$prefix") -ItemType Directory
-New-Item -Path (Join-Path $current_item.FullName "ModTemplate\Scripts\4_World\$prefix") -ItemType Directory
-New-Item -Path (Join-Path $current_item.FullName "ModTemplate\Scripts\5_Mission\$prefix") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\1_Core\$prefix") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\3_Game\$prefix") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\4_World\$prefix") -ItemType Directory
+New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\5_Mission\$prefix") -ItemType Directory
 
 # Rename all ModTemplate folders
 foreach ($folder in Get-ChildItem -Directory $target_directory -Recurse) {
-    if ($folder.Name.Contains("ModTemplate")) {
-        $new_name = $folder.FullName.Replace("ModTemplate", $prefix)
+    if ($folder.Name.Contains($template_token)) {
+        $new_name = $folder.FullName.Replace($template_token, $prefix)
         Rename-Item -Path $folder.FullName -NewName $new_name
     }
 }
+
+# Run Setupworkdrive
+.\SetupWorkdrive.bat
