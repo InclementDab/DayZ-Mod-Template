@@ -81,6 +81,7 @@ GameProjectClass {
 					Name "workbench"
 					Paths {
 						"DabsFramework/Workbench/ToolAddons"
+						"ModTemplate/Workbench/ToolAddons"
 					} 
 					EntryPoint "CreateWorkbench"
 				} 
