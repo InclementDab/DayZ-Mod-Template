@@ -77,7 +77,7 @@ $template_token = "ModTemplate"
 
 if (-not (Test-Path (Join-Path $target_directory $template_token))) {
     Write-Host "Running re-initialization script" -ForegroundColor Yellow
-    $template_token = Read-Host "Enter your current mod prefix name (ModName):"
+    $template_token = Read-Host "Enter your current mod prefix name (ModName)"
 }
 
 # Get user input
@@ -109,10 +109,24 @@ New-Item -Path (Join-Path $current_item.FullName "Profiles\Global") -ItemType Di
 
 # Rename all ModTemplate folders
 foreach ($folder in Get-ChildItem -Directory $target_directory -Recurse) {
-    if ($folder.Name.Contains($template_token)) {
+    if ($folder.Name.Contains($template_token) -and ($template_token -ne $prefix)) {
         $new_name = $folder.FullName.Replace($template_token, $prefix)
         Rename-Item -Path $folder.FullName -NewName $new_name
     }
+}
+
+# Get all .cpp, .c, and .gproj files in the current directory and its subdirectories
+$files = Get-ChildItem -Recurse -Include *.cpp, *.gproj, *.cfg -Depth 32
+
+foreach ($file in $files) {
+    # Read the contents of the file
+    $content = Get-Content $file.FullName
+
+    # Replace 'ModTemplate' with the value of $prefix
+    $updatedContent = $content -replace 'ModTemplate', $prefix
+
+    # Write the updated content back to the file
+    Set-Content -Path $file.FullName -Value $updatedContent
 }
 
 # Run Setupworkdrive
