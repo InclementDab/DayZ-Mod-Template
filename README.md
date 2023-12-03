@@ -42,16 +42,16 @@ Follow these steps to clone the DayZ Mod Template, set up your project environme
 
 # Workbench
 
-## Mounting your Mod to the P Drive
+#### Mounting to the Workdrive
 
-1. **Run the Batch File to Mount the Mod**:
+1. **Run the Batch File to Mount**:
    - Navigate to the `SetupWorkdrive.bat` file in your mod directory.
      ```
      ../DayZ-Mod-Name/SetupWorkdrive.bat 
      ```
-   - Execute this batch file. It will automatically mount all folders containing a 'Workbench' folder in your repository directory to your Workdrive (P Drive).
+   - Execute this batch file. It will automatically mount all folders containing a 'Workbench' folder in your repository directory to your Workdrive.
 
-## Opening the Project in Workbench
+#### Opening the Project in Workbench
 
 1. **Access the Project Directory**:
    - Go to the mod's project directory:
@@ -64,7 +64,7 @@ Follow these steps to clone the DayZ Mod Template, set up your project environme
    - Double-click on `dayz.gproj`.
    - If prompted, choose to open it with Workbench. You can find Workbench in `steamapps/common/DayZ Tools/Bin/Workbench`.
 
-## Configuring Source Data Directory in Workbench
+#### Configuring Source Data Directory in Workbench
 
 This step only needs to be completed one time, unless you change your DayZ install directory.
 
@@ -80,39 +80,8 @@ This step only needs to be completed one time, unless you change your DayZ insta
    - Exit and then reopen Workbench.
    - Reopen the `dayz.gproj` file.
 
-## Configuring the Project
 
-This step only needs to be completed when the project is installed to your machine
-
-1. **Set Up Project Configuration**:
-   - In Workbench, go to `Plugins -> Settings -> Configure Project`.
-   - Set the Repository path to your mod's location, for example, `C:/Dev/proj/DayZ-Dabs-Framework`.
-
-
-## Building the Project
-
-1. **Build the Project**
-    - In Workbench Build Project `(Plugins -> Build Mod)`
-    - Any folders inside of the ModTemplate with a config.cpp directory will be converted into PBO's on build. By default pboProject is used to build. This can be changed in Build configuration
-
-
-## Shortcuts
-
-| Key          | Command                     |
-|--------------|-----------------------------|
-| <kbd>F6</kbd> | Launch Game |
-| <kbd>F8</kbd> | Build Mod |
-| <kbd>Ctrl</kbd> + <kbd>F6</kbd> | Configure Project |
-| <kbd>Ctrl</kbd> + <kbd>F8</kbd> | Configure Build |
-| <kbd>F5</kbd> | Join Remote Game |
-| <kbd>F10</kbd> | Close Game |
-| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create New File |
-| <kbd>Ctrl</kbd> + <kbd>-</kbd> | Open Current Directory |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> | Rename Current File |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd> | Delete Current File |
-
-
-You can find more information on the [DayZ Workbench Wiki](https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging)
+#### With [Dabs Framework](https://github.com/InclementDab/DayZ-Dabs-Framework) on your machine, your project will automatically have plugins built-in. To use these plugins, follow `Using the Workbench Plugins` in the wiki.
 
 
 ## License
