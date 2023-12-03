@@ -1,86 +1,115 @@
 # DayZ-Mod-Template
 
-Complete DayZ Mod Template
+A Comprehensive Mod Template for DayZ. Optimized with Workbench for Advanced Scripting and pboProject for Efficient Building.
+This is my personal template, that I ues for all projects
 
-## Installation
+# Repository Setup
 
-Navigate to your project folder in any terminal of your choice, I use command prompt. **Important:** Do not clone inside of your P:\ drive - This process is done outside of your Workdrive folder.
+Follow these steps to clone the DayZ Mod Template, set up your project environment, and initialize your own Git repository.
 
-```
-# Clone the repository onto your PC
-git clone --depth 1 https://github.com/InclementDab/DayZ-Mod-Template.git DayZ-Mod-Name
+#### Creating Your Project from a Template
 
-# Go to your newly cloned folder
-cd DayZ-Mod-Name
+1. **Use the Template Repository**:
+   - Navigate to the DayZ Mod Template repository on GitHub: `https://github.com/InclementDab/DayZ-Mod-Template`
+   - Click on the "Use this template" button near the top of the repository page.
 
-# Run installation script
-./Install.ps1
+2. **Set Up Your New Repository**:
+   - Enter a name for your new repository, like `DayZ-Mod-Name`.
+   - Optionally, provide a description.
+   - Choose the repository visibility (public or private).
+   - Click on "Create repository from template" to generate your new repository.
 
-# Remove old .git folder
-rm -rf .git
+#### Cloning Your New Repository
 
-# Initialize a new git repository
-git init
+3. **Clone Your New Repository**:
+   - Once your repository is created, clone it to your local machine:
+     ```bash
+     git clone https://github.com/yourusername/DayZ-Mod-Name.git
+     ```
+   - Replace `yourusername` with your actual GitHub username.
 
-# Add all new files and commit
-git add .
-git commit -m "Initial commit"
-```
+4. **Navigate to the Cloned Directory**:
+   - Change your directory to the one you just cloned:
+     ```bash
+     cd DayZ-Mod-Name
+     ```
 
-Push to a new repository 
-```
-# Create a new repository on GitHub (from the website or API)
+5. **Run the Installation Script**:
+   - If the template includes an installation script (`Install.ps1`), run it:
+     ```bash
+     ./Install.ps1
+     ```
 
-# Link the local repository to the new remote repository
-git remote add origin https://github.com/yourusername/new-project-name.git
+# Workbench
 
-# Push the changes
-git push -u origin master
-```
+## Mounting your Mod to the P Drive
 
-## Setup
+1. **Run the Batch File to Mount the Mod**:
+   - Navigate to the `SetupWorkdrive.bat` file in your mod directory.
+     ```
+     ../DayZ-Mod-Name/SetupWorkdrive.bat 
+     ```
+   - Execute this batch file. It will automatically mount all folders containing a 'Workbench' folder in your repository directory to your Workdrive (P Drive).
 
-Once you've set up the files and ran the installation script, follow these instructions to begin working on your mod
+## Opening the Project in Workbench
 
-```
-Navigate to P:/YourModPrefix/Workbench
-```
+1. **Access the Project Directory**:
+   - Go to the mod's project directory:
+     ```
+     ../DayZ-Mod-Name/ModName/Workbench
+     ```
+   - Here, you will find the `dayz.gproj` file.
 
-### Workbench Shortcuts
+2. **Open the Project File**:
+   - Double-click on `dayz.gproj`.
+   - If prompted, choose to open it with Workbench. You can find Workbench in `steamapps/common/DayZ Tools/Bin/Workbench`.
 
-All Plugin shortcuts are listed below
+## Configuring Source Data Directory in Workbench
+
+This step only needs to be completed one time, unless you change your DayZ install directory.
+
+1. **Set the Source Data Directory**:
+   - In Workbench, navigate to `Workbench -> Options`.
+   - Set "Source Data Directory" to your DayZ installation path, such as `C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp`.
+
+2. **Handle the Restart Prompt**:
+   - Upon setting the directory, a prompt to restart Workbench will appear. Select 'No' to decline this automatic restart.
+
+3. **Manually Restart Workbench**:
+   - Close the Resource Browser to ensure all settings are applied.
+   - Exit and then reopen Workbench.
+   - Reopen the `dayz.gproj` file.
+
+## Configuring the Project
+
+This step only needs to be completed when the project is installed to your machine
+
+1. **Set Up Project Configuration**:
+   - In Workbench, go to `Plugins -> Settings -> Configure Project`.
+   - Set the Repository path to your mod's location, for example, `C:/Dev/proj/DayZ-Dabs-Framework`.
+
+
+## Building the Project
+
+1. **Build the Project**
+    - In Workbench Build Project `(Plugins -> Build Mod)`
+    - Any folders inside of the ModTemplate with a config.cpp directory will be converted into PBO's on build. By default pboProject is used to build. This can be changed in Build configuration
+
+
+## Shortcuts
 
 | Key          | Command                     |
 |--------------|-----------------------------|
 | <kbd>F6</kbd> | Launch Game |
+| <kbd>F8</kbd> | Build Mod |
 | <kbd>Ctrl</kbd> + <kbd>F6</kbd> | Configure Project |
+| <kbd>Ctrl</kbd> + <kbd>F8</kbd> | Configure Build |
 | <kbd>F5</kbd> | Join Remote Game |
 | <kbd>F10</kbd> | Close Game |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Create New File |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd> | Open Current Directory |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd> | Rename Current File |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Delete</kbd> | Delete Current File |
-
-
-### Setup
-```
-5.) Double click dayz.gproj - if prompted to run with an application, be sure to choose Workbench (you can find this in steamapps/common/DayZ Tools/Bin/Workbench)
-
-6.) Upon opening workbench, navigate to Workbench -> Options on the top navbar. Set "Source Data Directory" to your DayZ install location (example: C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp). Restart workbench when prompted. (Upon restarting you will need to close and reopen P:/YourModPrefix/dayz.gproj)
-
-7.) Navigate to Plugins -> Settings -> Configure Project (note: if the plugins folder is empty, you may need to click 'Settings -> Reload WB Scripts')
-
-8.) Set the Repository value to the installation location of your downloaded mod. (example: C:\Dev\proj\DayZ-Mod-Prefix)
-
-9.) (optional) Enable FilePatching in your configuration. This will be handled by the plugin automatically and load scripts / gui ingame without a repack required.
-
-10.) Press F6, or Plugins -> Launch Game . If you've installed everything properly (and have all of our mods downloaded) your game will launch with a virtual mission created in your P:/ drive. 
-
-11.) (not optional) Make some badass mods 
-
-```
-
-Any folders inside of the ModTemplate directory will be converted into PBO's (excluding the Workbench folder)
 
 
 You can find more information on the [DayZ Workbench Wiki](https://community.bistudio.com/wiki/DayZ:Workbench_Script_Debugging)
@@ -90,7 +119,4 @@ You can find more information on the [DayZ Workbench Wiki](https://community.bis
 
 Your tool is licensed under [MIT License](LICENSE.md).
 
----
-
-For any additional questions or feedback, please raise an issue in this repository or contact [Tyler Paul](mailto:tylerpaul2329@gmail.com).
-```
+For any additional questions or feedback, please raise an issue in this repository or contact [Dab](mailto:inclementdab@gmail.com).
