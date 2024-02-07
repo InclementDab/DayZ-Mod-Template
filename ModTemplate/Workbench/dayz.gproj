@@ -26,6 +26,16 @@ GameProjectClass {
 				"gui/imagesets/playstation_buttons.imageset"
 				"gui/imagesets/selection.imageset"
 				"gui/imagesets/console_toolbar.imageset"
+				"DabsFramework/gui/icons/brands.imageset"
+				"DabsFramework/gui/icons/duotone.imageset"
+				"DabsFramework/gui/icons/light.imageset"
+				"DabsFramework/gui/icons/regular.imageset"
+				"DabsFramework/gui/icons/sharp_light.imageset"
+				"DabsFramework/gui/icons/sharp_regular.imageset"
+				"DabsFramework/gui/icons/sharp_solid.imageset"
+				"DabsFramework/gui/icons/sharp_thin.imageset"
+				"DabsFramework/gui/icons/sharp_solid.imageset"
+				"DabsFramework/gui/icons/sharp_thin.imageset"
 			}
 			widgetStyles {
 				"gui/looknfeel/dayzwidgets.styles" 
