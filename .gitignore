@@ -1,27 +1,18 @@
-# DayZ packed files
 *.pbo
-
-# DayZ SA Private Keys
 *.biprivatekey
-
-# DayZ Binarize
-texHeaders.bin
-
-launch.bin
-build.bin
-
-# DayZ Obfuscation
-thing.obf
-
-# Local Workspace Settings
-**/Workbench/*.bin
-
-# Text Editor Workspace Configuration
-.vscode/
-.idea/
-
-# Profile excludes
+*.obf
 *.RPT
 *.log
 *.ADM
 *.mdmp
+*.ch
+*.DayZProfile
+Profiles/**/Users/*
+
+texHeaders.bin
+dayz.bin
+
+.vscode/
+.idea/
+
+Missions/**/storage_*

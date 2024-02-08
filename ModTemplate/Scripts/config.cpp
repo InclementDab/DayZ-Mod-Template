@@ -1,63 +1,63 @@
-
 class CfgPatches
 {
-	class ModTemplate_Scripts
+	class MT_Scripts
 	{
-        requiredVersion = 0.1;
-		requiredAddons[] = {"DZ_Scripts"};
+		requiredAddons[] = { "DZ_Scripts" };
 	};
 };
 
-class CfgMods 
+class CfgAddons
 {
-	class ModTemplate
-	{
-		name = "DayZ-Mod-Template";
-		dir = "ModTemplate";
-		creditsJson = "ModTemplate/Scripts/Credits.json";
-		inputs = "ModTemplate/Scripts/Inputs.xml";
-		type = "mod";
+    class PreloadAddons
+    {
+        class ModTemplate
+        {
+            list[]={};
+        };
+    };
+};
 
-		dependencies[] =
-		{
-			"Game", "World", "Mission"
-		};
-		class defs
+class CfgMods
+{
+    class ModTemplate
+    {
+        name="";
+        dir="ModTemplate";
+        picture="";
+        action="";
+        author="";
+        overview = "";
+        defines[] = {  };
+
+        class defs
 		{
 			class imageSets
 			{
 				files[]= {};
 			};
-			class engineScriptModule
+			class widgetStyles
 			{
-				files[] =
-				{
-					"ModTemplate/scripts/1_core"
-				};
+				files[]= {};
+			};
+
+			class engineScriptModule 
+			{ 
+				files[] = { "ModTemplate/Scripts/1_Core"};
 			};
 
 			class gameScriptModule
 			{
-				files[] = 
-				{
-					"ModTemplate/scripts/3_Game"
-				};
+				files[] = { "ModTemplate/Scripts/3_Game" };
 			};
 			class worldScriptModule
 			{
-				files[] = 
-				{
-					"ModTemplate/scripts/4_World"
-				};
+				files[] = { "ModTemplate/Scripts/4_World" };
 			};
 
 			class missionScriptModule 
 			{
-				files[] = 
-				{
-					"ModTemplate/scripts/5_Mission"
-				};
+				files[] = { "ModTemplate/Scripts/5_Mission" };
 			};
 		};
-	};
+    };
 };
