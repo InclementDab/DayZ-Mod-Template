@@ -32,7 +32,6 @@ New-Item -Path (Join-Path $current_item.FullName "$template_token\Scripts\5_Miss
 
 New-Item -Path (Join-Path $current_item.FullName "Addons") -ItemType Directory
 
-New-Item -Path (Join-Path $current_item.FullName "Missions\Dev") -ItemType Directory
 New-Item -Path (Join-Path $current_item.FullName "Missions\Global") -ItemType Directory
 
 New-Item -Path (Join-Path $current_item.FullName "Profiles\Dev") -ItemType Directory
