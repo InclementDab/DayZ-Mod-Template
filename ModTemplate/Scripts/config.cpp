@@ -27,7 +27,8 @@ class CfgMods
         action="";
         author="";
         overview = "";
-        defines[] = {  };
+		inputs = "";
+        defines[] = {};
 
         class defs
 		{
