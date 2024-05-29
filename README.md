@@ -64,23 +64,6 @@ Follow these steps to clone the DayZ Mod Template, set up your project environme
    - Double-click on `dayz.gproj`.
    - If prompted, choose to open it with Workbench. You can find Workbench in `steamapps/common/DayZ Tools/Bin/Workbench`.
 
-#### Configuring Source Data Directory in Workbench
-
-This step only needs to be completed one time, unless you change your DayZ install directory.
-
-1. **Set the Source Data Directory**:
-   - In Workbench, navigate to `Workbench -> Options`.
-   - Set "Source Data Directory" to your DayZ installation path, such as `C:/Program Files (x86)/Steam/steamapps/common/DayZ Exp`.
-
-2. **Handle the Restart Prompt**:
-   - Upon setting the directory, a prompt to restart Workbench will appear. Select 'No' to decline this automatic restart.
-
-3. **Manually Restart Workbench**:
-   - Close the Resource Browser to ensure all settings are applied.
-   - Exit and then reopen Workbench.
-   - Reopen the `dayz.gproj` file.
-
-
 #### With [Dabs Framework](https://github.com/InclementDab/DayZ-Dabs-Framework) on your machine, your project will automatically have plugins built-in. To use these plugins, follow `Using the Workbench Plugins` in the wiki.
 
 
