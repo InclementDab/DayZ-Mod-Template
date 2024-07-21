@@ -28,6 +28,7 @@ class CfgMods
         author="";
         overview = "";
 		inputs = "";
+		type = "mod";
         defines[] = {};
 
         class defs
