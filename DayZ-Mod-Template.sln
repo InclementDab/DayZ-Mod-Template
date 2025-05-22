@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModTemplate", "ModTemplate", "{3C23307E-4619-DFBA-8F7D-46B479FFB994}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workbench", "Workbench", "{B1A2F49B-3838-17ED-4B56-F676E9F18E34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krypton", "ModTemplate\Workbench\Krypton\Krypton.csproj", "{F61F884E-C697-278B-2C36-B49659B09EBA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F61F884E-C697-278B-2C36-B49659B09EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61F884E-C697-278B-2C36-B49659B09EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61F884E-C697-278B-2C36-B49659B09EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61F884E-C697-278B-2C36-B49659B09EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1A2F49B-3838-17ED-4B56-F676E9F18E34} = {3C23307E-4619-DFBA-8F7D-46B479FFB994}
+		{F61F884E-C697-278B-2C36-B49659B09EBA} = {B1A2F49B-3838-17ED-4B56-F676E9F18E34}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C9E56F2-05F4-4E40-BB56-3C89E96E6484}
+	EndGlobalSection
+EndGlobal
