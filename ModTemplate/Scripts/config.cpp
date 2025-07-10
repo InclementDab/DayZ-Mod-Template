@@ -27,9 +27,13 @@ class CfgMods
         action="";
         author="";
         overview = "";
-		inputs = "";
+		inputs = "ModTemplate/Scripts/Inputs.xml";
 		type = "mod";
         defines[] = {};
+		dependencies[] =
+		{
+			"Game", "World", "Mission"
+		};
 
         class defs
 		{
